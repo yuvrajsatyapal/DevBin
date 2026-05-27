@@ -43,11 +43,11 @@ export const LoginButtons = () => {
 
   return (
     <div className="flex items-center justify-between">
-      <Button className="w-[45%]" onClick={signinWithGithub} variant="outline">
+      <Button className="w-[45%] cursor-pointer" onClick={signinWithGithub} variant="outline">
         <FaGithub />
         Github
       </Button>
-      <Button className="w-[45%]" onClick={signinWithGoogle} variant="outline">
+      <Button className="w-[45%] cursor-pointer" onClick={signinWithGoogle} variant="outline">
         <FcGoogle />
         Google
       </Button>

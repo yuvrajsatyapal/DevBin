@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 
 import { TRPCReactProvider } from "@/trpc/client";
+import { Toaster } from "sonner";
 
 // =============================================================================
 // ROOT PROVIDERS - Wraps the app with all necessary context providers
@@ -34,5 +35,10 @@ export const Provider = ({ children }: ProviderProps) => {
 
   if (!isMounted) return null;
 
-  return <TRPCReactProvider>{children}</TRPCReactProvider>;
+  return (
+    <TRPCReactProvider>
+      {children}
+      <Toaster position="bottom-right" duration={2000} richColors/>
+    </TRPCReactProvider>
+  );
 };
